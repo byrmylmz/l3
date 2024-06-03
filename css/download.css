@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida sans", arial, sans-serif;
+
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 115vh;
+    background-attachment: fixed;
+    background-image: url("../img/backgrounds/download_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+nav{
+    height: 80px;
+    background: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem calc((100vw - 1300px) / 2)
+}
+
+.nav-item a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Create the underline element */
+.nav-item a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/* Show the underline on hover */
+.nav-item a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.nav-item{list-style: none;
+    background: cadetblue;
+    justify-content: flex-start;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+ul{display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;}
+
+.logo{ color: black;
+    font-size: 1.5rem;
+    font-weight:bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+}
+.logo{
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border: none;
+    color: wheat;
+    background: cadetblue;
+    cursor: pointer;
+
+}
+.logo:hover{
+    background:cadetblue;
+    color: indigo;
+}
+nav a{
+    text-decoration:none;
+    color: black;
+    padding: 0 1.5rem;
+
+}
+nav a:hover{
+    color: white
+}
+
+#downloadnow {
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    translate: -50% 0;
+    font-size: 1.5rem;
+    font-weight: 80;
+    padding: 1rem 4rem;
+    border-radius: 6px;
+    border: 0;
+    mix-blend-mode: difference;
+    transition: filter 0.2s;
+    background: white;
+    color: black;
+}
+
+#downloadnow:before {
+    content: "download now";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+    mix-blend-mode: unset;
+}
+
+#downloadnow::after {
+    content: "";
+    left: 8%;
+    right: 8%;
+    height: 12%;
+    top: 130%;
+    background: white;
+    position: absolute;
+    border-radius: 100px;
+    mix-blend-mode: difference;
+}
+
+#downloadnow:is(:hover, :focus-visible) {
+    filter: brightness(0.5);
+}
+
+h1 {
+    font-weight: 120;
+    background: linear-gradient(hsl(0 0% 10%), hsl(0 0% 60%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+section {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: clamp(2rem, 4vw + 1rem, 8rem);
+}
+
+main {
+    display: grid;
+    gap: 8rem;
+    justify-items: center;
+    padding-bottom: 50vh;
+}
+
+img {
+    height: 50vh;
+}
+
+img:nth-of-type(even) {
+    translate: -25% 0;
+}
+
+img:nth-of-type(odd) {
+    translate: 25% 0;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button{
+    margin-bottom: 60px;
+}
+
+.transparent-footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add some padding */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

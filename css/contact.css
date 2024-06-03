@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida sans", arial, sans-serif;
+
+}
+
+nav{
+    height: 80px;
+    background: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem calc((100vw - 1300px) / 2)
+}
+
+.nav-item a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Create the underline element */
+.nav-item a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/* Show the underline on hover */
+.nav-item a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.nav-item{list-style: none;
+    background: cadetblue;
+    justify-content: flex-start;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+ul{display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;}
+
+.logo{ color: black;
+    font-size: 1.5rem;
+    font-weight:bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+}
+.logo{
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border: none;
+    color: wheat;
+    background: cadetblue;
+    cursor: pointer;
+
+}
+.logo:hover{
+    background:cadetblue;
+    color: indigo;
+}
+nav a{
+    text-decoration:none;
+    color: black;
+    padding: 0 1.5rem;
+
+}
+nav a:hover{
+    color: white
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-image: url("../img/backgrounds/contact_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*height: 700px; !* Set a fixed height for the body *!*/
+    /*margin-bottom: 200px; !* Add a large margin-bottom to push content below the viewport *!*/
+    overflow-y: scroll; /* Add vertical scrollbar */
+
+}
+
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    /*width: 800px;*/
+    height: 500px;
+    transition: all 200ms;
+    margin-top: 200px;
+}
+
+.container:hover .box {
+    filter: grayscale(100%) opacity(24%);
+}
+
+.box {
+    position: relative;
+    transition: all 200ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box:hover {
+    filter: grayscale(0%) opacity(100%);
+}
+
+
+.box:nth-child(odd) {
+    transform: translateY(-16px);
+}
+
+.box:nth-child(even) {
+    transform: translateY(16px);
+}
+
+.box::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 20px;
+    background: #000;
+    color: #fff;
+    padding: 10px 10px 10px 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.box:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+
+.box {
+        overflow: hidden;
+}
+
+.box {
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.transparent-footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add some padding */
+    position: fixed; /* Fix the footer at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+}

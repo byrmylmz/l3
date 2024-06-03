@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida sans",arial,sans-serif;
+
+}
+
+nav{
+    height: 80px;
+    background: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem calc((100vw - 1300px) / 2)
+}
+
+.nav-item a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Create the underline element */
+.nav-item a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/* Show the underline on hover */
+.nav-item a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.nav-item{list-style: none;
+    background: cadetblue;
+    justify-content: flex-start;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+ul{display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;}
+
+.logo{ color: black;
+    font-size: 1.5rem;
+    font-weight:bold;
+    font-style: italic;
+    padding: 0 2rem;
+
+}
+.logo{
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border: none;
+    color: wheat;
+    background: cadetblue;
+    cursor: pointer;
+
+}
+.logo:hover{
+    background:cadetblue;
+    color: indigo;
+}
+nav a{
+    text-decoration:none;
+    color: black;
+    padding: 0 1.5rem;
+
+}
+nav a:hover{
+    color: white
+}
+.add-table-counter {
+    counter-reset: rowNumber_0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    font: 16px/1.2 "Roboto", sans-serif;
+    color: #333;
+}
+a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background-color: #f4f4f4; /* Light gray background */
+    background-color: rgba(173, 216, 230, 0.8); /* Light blue background with 80% opacity */
+    /*background-image: url('../img/Surakarta.png'); /* Replace 'path/to/your/image.jpg' with the path to your image */
+    /*background-size: cover; /* Cover the entire viewport with the background image */
+    /*background-position: center;  Center the background image */
+
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
+
+}
+h1 {
+    text-align: center;
+    color: #333; /* Dark gray color */
+}
+canvas {
+    max-width: 100%;
+    height: auto;
+     /* Centers the canvas horizontally */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #f9f9f9; /* Lighter gray background for the footer */
+    color: #666; /* Gray text color */
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}
+.transparent-footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add some padding */
+    position: fixed; /* Fix the footer at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+}
